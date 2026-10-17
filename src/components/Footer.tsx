@@ -248,7 +248,6 @@ export default function Footer() {
                     >
                       <span className="atlas-pill-flag">{dest.flag}</span>
                       <span className="atlas-pill-name">{dest.name}</span>
-                      <span className="text-[10px] opacity-70 ml-0.5">↗</span>
                     </a>
                   );
                 })}
@@ -299,7 +298,7 @@ export default function Footer() {
                           {/* Floating Country Tag */}
                           <span className={`atlas-pin-tag ${isActive ? "visible" : ""}`}>
                             <span className="atlas-tag-flag">{dest.flag}</span>
-                            <span className="atlas-tag-text">{dest.name} ↗</span>
+                            <span className="atlas-tag-text">{dest.name}</span>
                           </span>
 
                           {/* Teardrop Pin */}

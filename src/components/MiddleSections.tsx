@@ -160,9 +160,6 @@ function ReaderVoicesSection() {
           <div className="voices-head">
             <span className="hiw-label">✦ 6 Real Amazon Reviews Across 6 Countries ✦</span>
             <h2>Travels that stayed with them</h2>
-            <p className="voices-sub">
-              Verified stories and 5-star ratings from readers exploring Rome, Türkiye, Egypt, Paris, Barcelona & Amsterdam.
-            </p>
           </div>
         </div>
 

@@ -2138,14 +2138,6 @@ nav.ref-nav.open .burger {
   color: var(--ink);
 }
 
-.voices-sub {
-  font-family: var(--bf);
-  font-size: clamp(14px, 1.8vw, 16px);
-  color: var(--mut);
-  line-height: 1.5;
-  margin: 0;
-}
-
 /* Full-width continuous smooth marquee track */
 .voices-marquee-wrapper {
   position: relative;

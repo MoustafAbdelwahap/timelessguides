@@ -2328,15 +2328,6 @@ nav.ref-nav.open .burger {
   margin-top: 2px;
 }
 
-.voices-hint {
-  text-align: center;
-  margin-top: 8px;
-  font-size: 11.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #8c7d6b;
-}
-
 @media (max-width: 640px) {
   .voice-card {
     width: 310px;

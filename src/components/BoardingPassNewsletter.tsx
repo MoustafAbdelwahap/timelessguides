@@ -290,7 +290,7 @@ export default function BoardingPassNewsletter() {
                 </div>
                 <div>
                   <small>Seat</small>
-                  <b>Window 1A</b>
+                  <b>A12</b>
                 </div>
                 <i className="bar" />
               </div>

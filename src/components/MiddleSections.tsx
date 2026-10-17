@@ -179,10 +179,6 @@ function ReaderVoicesSection() {
             ))}
           </div>
         </div>
-
-        <div className="voices-hint">
-          <span>✦ Auto-scrolling 6 country reviews &middot; Hover to pause &middot; Click any book tag to view on Amazon ✦</span>
-        </div>
       </section>
     </>
   );

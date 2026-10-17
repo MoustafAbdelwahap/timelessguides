@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isSolid
+        isSolid || !isHomePage
           ? "bg-[#211C18]/95 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.4)] border-b border-[#C9A15B]/20 py-3"
           : "bg-transparent py-5 lg:py-6"
       }`}

@@ -305,11 +305,11 @@ export default function Footer() {
                           <svg viewBox="0 0 24 32" className="atlas-pin-svg">
                             <path
                               d="M12 0C5.373 0 0 5.373 0 12c0 9 12 20 12 20s12-11 12-20c0-6.627-5.373-12-12-12z"
-                              fill="#c96b4f"
-                              stroke="#ffffff"
+                              fill="#211C18"
+                              stroke="#C9A15B"
                               strokeWidth="1.5"
                             />
-                            <circle cx="12" cy="12" r="4.5" fill="#ffffff" />
+                            <circle cx="12" cy="12" r="4.5" fill="#E5BD70" />
                           </svg>
                         </a>
                       </div>

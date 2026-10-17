@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "sdk_version": "0.23.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://wtzawxdicpsnkxglarfl.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "timeless-guides-mcp",
+      "version": "0.1.0",
+      "title": "Timeless Guides"
+    },
+    "tools": [
+      {
+        "name": "list_journal_posts",
+        "title": "List journal posts",
+        "description": "List published Timeless Guides journal posts, most recent first.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "limit": {
+              "description": "Maximum posts to return (default 20).",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_journal_post",
+        "title": "Get journal post",
+        "description": "Fetch the full content of a published journal post by its slug.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The post slug, e.g. 'istanbul-hidden-gems'."
+            }
+          },
+          "required": [
+            "slug"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_destinations",
+        "title": "List destinations",
+        "description": "List published Timeless Guides destination pages.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "limit": {
+              "description": "Maximum destinations to return (default 50).",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_books",
+        "title": "List books",
+        "description": "List published Timeless Guides books with Amazon links.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_consultation_requests",
+        "title": "List consultation requests",
+        "description": "List consultation booking requests. Requires an admin account (RLS protected).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "limit": {
+              "description": "Max rows to return (default 25).",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            },
+            "onlyOpen": {
+              "description": "If true, only return requests that are not marked handled.",
+              "type": "boolean"
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "create_consultation_request",
+        "title": "Create consultation request",
+        "description": "Submit a new consultation booking request on behalf of the signed-in user.",
+        "annotations": {
+          "readOnlyHint": false,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Traveler's full name."
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$",
+              "description": "Contact email."
+            },
+            "offering": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Which offering (e.g. 'Istanbul Consultation')."
+            },
+            "travel_dates": {
+              "description": "Planned travel window, free-form.",
+              "type": "string"
+            },
+            "preferred_date": {
+              "description": "Preferred consultation date (ISO date).",
+              "type": "string"
+            },
+            "message": {
+              "description": "Any additional context.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "email",
+            "offering"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}

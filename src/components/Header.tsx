@@ -90,10 +90,7 @@ export default function Header() {
                 className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
                 role="menu"
               >
-                <div className="bg-[#211C18]/95 backdrop-blur-md border border-[#C9A15B]/30 rounded-2xl p-4 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
-                  <div className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#C9A15B] mb-2 px-3">
-                    Amazon Field Guides
-                  </div>
+                <div className="bg-[#211C18]/95 backdrop-blur-md border border-[#C9A15B]/30 rounded-2xl p-3 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
                   <div className="flex flex-col gap-1">
                     <a
                       href="https://www.amazon.com/dp/B0FCF1PYGG"
@@ -103,7 +100,7 @@ export default function Header() {
                       onClick={closeMenu}
                     >
                       <span>Rome, Italy</span>
-                      <span className="text-[11px] text-[#C9A15B] group-hover:text-[#211C18]">🇮🇹 ↗</span>
+                      <span className="text-[13px]">🇮🇹</span>
                     </a>
                     <a
                       href="https://www.amazon.com/dp/B0GT2NZLH8"
@@ -113,7 +110,7 @@ export default function Header() {
                       onClick={closeMenu}
                     >
                       <span>Türkiye</span>
-                      <span className="text-[11px] text-[#C9A15B] group-hover:text-[#211C18]">🇹🇷 ↗</span>
+                      <span className="text-[13px]">🇹🇷</span>
                     </a>
                     <a
                       href="https://www.amazon.com/dp/B0GSL9CWZ6"
@@ -123,7 +120,7 @@ export default function Header() {
                       onClick={closeMenu}
                     >
                       <span>Egypt & Nile</span>
-                      <span className="text-[11px] text-[#C9A15B] group-hover:text-[#211C18]">🇪🇬 ↗</span>
+                      <span className="text-[13px]">🇪🇬</span>
                     </a>
                     <a
                       href="https://www.amazon.com/dp/B0H21PTJ77"
@@ -133,7 +130,7 @@ export default function Header() {
                       onClick={closeMenu}
                     >
                       <span>Paris, France</span>
-                      <span className="text-[11px] text-[#C9A15B] group-hover:text-[#211C18]">🇫🇷 ↗</span>
+                      <span className="text-[13px]">🇫🇷</span>
                     </a>
                     <a
                       href="https://www.amazon.com/dp/B0GHGM2TCX"
@@ -143,7 +140,7 @@ export default function Header() {
                       onClick={closeMenu}
                     >
                       <span>Barcelona, Spain</span>
-                      <span className="text-[11px] text-[#C9A15B] group-hover:text-[#211C18]">🇪🇸 ↗</span>
+                      <span className="text-[13px]">🇪🇸</span>
                     </a>
                     <a
                       href="https://www.amazon.com/dp/B0H9G3JJCJ"
@@ -153,7 +150,7 @@ export default function Header() {
                       onClick={closeMenu}
                     >
                       <span>Amsterdam</span>
-                      <span className="text-[11px] text-[#C9A15B] group-hover:text-[#211C18]">🇳🇱 ↗</span>
+                      <span className="text-[13px]">🇳🇱</span>
                     </a>
                   </div>
                 </div>
@@ -225,9 +222,8 @@ export default function Header() {
           <nav className="flex flex-col gap-4 text-[16px]">
             {/* Mobile Destinations with direct Amazon book links */}
             <div className="py-1 border-b border-white/5">
-              <div className="text-[#FAF7F0] font-medium mb-2.5 flex items-center justify-between">
+              <div className="text-[#FAF7F0] font-medium mb-2.5">
                 <span>Destinations</span>
-                <span className="text-[11px] text-[#C9A15B] tracking-wider uppercase">Amazon Guides</span>
               </div>
               <div className="grid grid-cols-2 gap-2 pl-1">
                 <a
@@ -237,7 +233,7 @@ export default function Header() {
                   className="text-[13.5px] text-[#C9A15B] hover:text-white flex items-center gap-1.5 py-1"
                   onClick={closeMenu}
                 >
-                  <span>🇮🇹 Rome ↗</span>
+                  <span>🇮🇹 Rome</span>
                 </a>
                 <a
                   href="https://www.amazon.com/dp/B0GT2NZLH8"
@@ -246,7 +242,7 @@ export default function Header() {
                   className="text-[13.5px] text-[#C9A15B] hover:text-white flex items-center gap-1.5 py-1"
                   onClick={closeMenu}
                 >
-                  <span>🇹🇷 Türkiye ↗</span>
+                  <span>🇹🇷 Türkiye</span>
                 </a>
                 <a
                   href="https://www.amazon.com/dp/B0GSL9CWZ6"
@@ -255,7 +251,7 @@ export default function Header() {
                   className="text-[13.5px] text-[#C9A15B] hover:text-white flex items-center gap-1.5 py-1"
                   onClick={closeMenu}
                 >
-                  <span>🇪🇬 Egypt ↗</span>
+                  <span>🇪🇬 Egypt</span>
                 </a>
                 <a
                   href="https://www.amazon.com/dp/B0H21PTJ77"
@@ -264,7 +260,7 @@ export default function Header() {
                   className="text-[13.5px] text-[#C9A15B] hover:text-white flex items-center gap-1.5 py-1"
                   onClick={closeMenu}
                 >
-                  <span>🇫🇷 Paris ↗</span>
+                  <span>🇫🇷 Paris</span>
                 </a>
                 <a
                   href="https://www.amazon.com/dp/B0GHGM2TCX"
@@ -273,7 +269,7 @@ export default function Header() {
                   className="text-[13.5px] text-[#C9A15B] hover:text-white flex items-center gap-1.5 py-1"
                   onClick={closeMenu}
                 >
-                  <span>🇪🇸 Barcelona ↗</span>
+                  <span>🇪🇸 Barcelona</span>
                 </a>
                 <a
                   href="https://www.amazon.com/dp/B0H9G3JJCJ"
@@ -282,7 +278,7 @@ export default function Header() {
                   className="text-[13.5px] text-[#C9A15B] hover:text-white flex items-center gap-1.5 py-1"
                   onClick={closeMenu}
                 >
-                  <span>🇳🇱 Amsterdam ↗</span>
+                  <span>🇳🇱 Amsterdam</span>
                 </a>
               </div>
             </div>

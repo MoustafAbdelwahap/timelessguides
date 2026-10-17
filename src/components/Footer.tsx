@@ -374,23 +374,20 @@ export default function Footer() {
               {/* Right Column: High-level Pill Tabs */}
               <div className="clean-footer-nav">
                 <div className="clean-nav-pills">
-                  <Link to="/" className="clean-pill-tab">
-                    Home
-                  </Link>
                   <a href={getHref("#destinations")} className="clean-pill-tab">
                     Destinations
                   </a>
-                  <a href={getHref("#books")} className="clean-pill-tab">
-                    Field Guides
+                  <a href={getHref("#destinations")} className="clean-pill-tab">
+                    Travel Guides
                   </a>
-                  <Link to="/connect" className="clean-pill-tab">
-                    Connect with Locals
-                  </Link>
                   <Link to="/journal" className="clean-pill-tab">
-                    Slow Journal
+                    Blog
+                  </Link>
+                  <Link to="/connect" className="clean-pill-tab">
+                    Book Consultation
                   </Link>
                   <a href="mailto:timelessguides.global@gmail.com" className="clean-pill-tab">
-                    Contact us
+                    Contact Us
                   </a>
                 </div>
               </div>
